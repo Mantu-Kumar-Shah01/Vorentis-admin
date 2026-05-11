@@ -1,0 +1,51 @@
+<h1>Contact Messages</h1>
+
+<p>Total Messages: {{messages.length}}</p>
+
+<div *ngFor="let message of messages">
+
+    <hr>
+
+    <h3>Name: {{message.name}}</h3>
+
+   <h3>
+    Name:
+    <span>{{message.name}}</span>
+</h3>
+
+<p>
+    Email:
+    <span>{{message.email}}</span>
+</p>
+
+<p>
+    Project Type:
+    <span>{{message.projectType}}</span>
+</p>
+
+<p>
+    Budget:
+    <span>₹{{message.budget}}</span>
+</p>
+
+<p>
+    Message:
+    <span>{{message.message}}</span>
+</p>
+
+<p>
+    Status:
+    <span class="status">{{message.status}}</span>
+</p>
+
+<p>
+    Created At:
+    <span>{{message.createdAt | date:'medium'}}</span>
+</p>
+
+<p>
+    Updated At:
+    <span>{{message.updatedAt | date:'medium'}}</span>
+</p>
+
+</div>

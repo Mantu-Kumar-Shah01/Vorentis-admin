@@ -1,0 +1,75 @@
+<div class="login-container">
+
+    <div class="login-box">
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+            <img
+                src="Favicon.png"
+                alt="Vorentis Logo">
+
+            <div class="logo-text">
+
+                <h2>
+                    OR<span class="green-e">E</span>NTIS
+                </h2>
+
+                <span class="tagline">
+
+                    GROWING BRANDS.
+
+                    <span class="green-text">
+                        BUILDING
+                    </span>
+
+                    FUTURES.
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- LOGIN TITLE -->
+
+        <!-- <h3>
+            Admin Login
+        </h3> -->
+
+        <!-- FORM -->
+
+        <form (ngSubmit)="login()">
+
+            <div class="input-box">
+
+                <input
+                    type="email"
+                    placeholder="Enter Email"
+                    [(ngModel)]="email"
+                    name="email">
+
+            </div>
+
+            <div class="input-box">
+
+                <input
+                    type="password"
+                    placeholder="Enter Password"
+                    [(ngModel)]="password"
+                    name="password">
+
+            </div>
+
+            <button type="submit">
+
+                Login
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>

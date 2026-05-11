@@ -1,0 +1,198 @@
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside
+        class="sidebar"
+        [class.active]="isSidebarOpen">
+
+        <!-- CLOSE BUTTON -->
+
+        <button
+            class="close-btn"
+            (click)="toggleSidebar()">
+
+            ✕
+
+        </button>
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+            <img
+                src="Favicon.png"
+                alt="Vorentis Logo">
+
+            <div class="logo-text">
+
+                <h2>
+                    OR<span class="green-e">E</span>NTIS
+                </h2>
+
+                <span class="tagline">
+
+                    GROWING BRANDS.
+
+                    <span class="green-text">
+                        BUILDING
+                    </span>
+
+                    FUTURES.
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- MENU -->
+
+        <ul>
+
+            <li
+                routerLink="/dashboard"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact:true}"
+                (click)="toggleSidebar()">
+
+                Dashboard
+
+            </li>
+
+            <li (click)="logout()">
+
+                Logout
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- OVERLAY -->
+
+    <div
+        class="overlay"
+        [class.show]="isSidebarOpen"
+        (click)="toggleSidebar()">
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="content">
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <!-- MENU BUTTON -->
+
+            <button
+                class="menu-btn"
+                (click)="toggleSidebar()">
+
+                ☰
+
+            </button>
+
+            <h1>
+
+                Welcome
+
+                <span>
+                    Admin
+                </span>
+
+            </h1>
+
+        </div>
+
+        <!-- CARDS -->
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h2>
+                    {{ totalMessages }}
+                </h2>
+
+                <p>
+                    Total Messages
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>
+                    {{ newMessages }}
+                </h2>
+
+                <p>
+                    New Messages
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- TABLE -->
+
+        <div class="table-section">
+
+            <div class="table-header">
+
+                <h2>
+                    Recent Messages
+                </h2>
+
+            </div>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Message</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr *ngFor="let message of messages">
+
+                            <td>
+                                {{ message.name }}
+                            </td>
+
+                            <td>
+                                {{ message.email }}
+                            </td>
+
+                            <td>
+                                {{ message.message }}
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
